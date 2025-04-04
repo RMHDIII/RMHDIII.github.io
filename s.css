@@ -1,0 +1,111 @@
+body{
+    background-color: #222;
+}
+.container{
+    width: 80vw;
+    height:30vh;
+    margin: 5vh auto 0;
+    background-color: #4d4949;
+    box-shadow: 0 2px 6px rgb(28, 80, 98);
+    border:1px solid rgb(46, 113, 137);
+    border-radius: 8%;
+    transition:transform 0.2s;
+}
+.container:hover{
+    box-shadow: 0 4px 10px rgb(50, 146, 178);
+    transform:scale(1.02) translateY(5px);
+}
+.input{
+    margin:10% auto 0;
+    width: 90%;
+    height:35%;
+    border-radius: 10%;
+    background-color: #514c4c;
+}
+.input:hover{
+    box-shadow: 0 2px 2vh rgb(61, 176, 214);
+}
+.history{
+    position: relative;
+    width:60%;
+    height:35%;
+    margin:-15%  36%;
+    background-color: #3a3838;
+    border-radius: 5%;
+    border:2px solid rgb(79, 157, 183);
+}
+.history:hover{
+    box-shadow: 0 4px 4px rgb(79, 157, 183);
+}
+.number{
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    top:25%;
+    color:white;
+    background-color: #514c4c;
+    border:0;
+    width: 80%;
+    height:70%;
+}
+.hnumber{
+    position: relative;
+    top:25%;
+    background-color: #3a3838;
+}
+.opeator{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    position: relative;
+    top:-30vh;
+}
+.keyboard{
+    display: flex;
+    flex-direction: column;
+    height:58vh;
+    width: 80vw;
+    background-color: #514c4c;
+    margin:4vh auto 0;
+    border:1px solid #3f3c3c;
+    border-radius: 5%;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    height: 33%;
+    width: 90%;
+}
+.numkey{
+    height:90%;
+    width:20%;
+    text-align: center;
+    margin:2px;
+    border-radius: 5%;
+    background-color: #605b5b;
+    box-shadow: 0 2px 6px rgb(109, 136, 146);
+    border:1px solid rgb(46, 113, 137);
+    border-radius: 8%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    transition:transform 0.2s;
+}
+.numkey:hover{
+    transform:scale(0.95);
+    border:1px solid rgb(55, 131, 159);
+    box-shadow: 0 2px 22px rgb(117, 145, 155);
+}
+.drop {
+    position: absolute;
+    right: 10px;
+    top: -30%;
+    transform: translateY(-50%);
+    font-size: 3.5rem;
+    color: #61dafb;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.drop.appear {
+    opacity: 1;
+}
