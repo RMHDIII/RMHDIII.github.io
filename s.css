@@ -47,13 +47,18 @@ body{
     border:0;
     width: 80%;
     height:70%;
+    outline: 0;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
 }
 .hnumber{
     position: relative;
     top:25%;
     background-color: #3a3838;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
 }
-.opeator{
+.operator{
     font-family: 'Courier New', Courier, monospace;
     font-size: 2rem;
     position: relative;
@@ -73,7 +78,7 @@ body{
     display: flex;
     flex-direction: row;
     height: 33%;
-    width: 90%;
+    width: 100%;
 }
 .numkey{
     height:90%;
