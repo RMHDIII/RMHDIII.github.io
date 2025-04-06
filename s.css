@@ -105,11 +105,11 @@
   
   /* Animations */
   .animate-forward {
-    animation: spinForward 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation: spinForward 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
   
   .animate-backward {
-    animation: spinBackward 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation: spinBackward 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
   
   @keyframes spinForward {
