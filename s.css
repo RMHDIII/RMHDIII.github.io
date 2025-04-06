@@ -7,10 +7,11 @@
     --box-shadow: #a233bb;
     --border-colorIdle: #fb5cf9;
     --button-text-hovered: #86fbd4;
-    --text-shadow:#bd4ebc;
+    --text-shadow:#fb5cf9;
     --toggleText-shadow:#9dfadb;
     --fontSize: clamp(3.5rem, 6vw, 3rem);
-    --text-fontsize:clamp(3.5rem, 6vw, 3rem);
+    --text-fontSize: clamp(4.5rem, 6vw, 3rem);
+
     --text-width: 90%;
     --text-height: auto;
     --text-bottomDistance: 35%;
@@ -22,8 +23,7 @@
 @media(min-width: 768px){
     :root{
         --text-bottomDistance: 5%;
-        --fontSize: clamp(3.5rem, 6vw, 3rem);
-        --text-fontsize:clamp(5.5rem, 6vw, 3rem);
+        --text-fontSize: clamp(6.5rem, 6vw, 3rem);
     }
 }
 
@@ -34,7 +34,7 @@ body.light {
     --button-bg: #6a459a;
     --button-text: #95eace;
     --box-shadow: #6ab1bf;
-    --text-shadow:#61e0e4;
+    --text-shadow:#66f3f8;
     --toggleText-shadow:#fb5cf9;
     --border-colorIdle: #5cc3fb;
     --button-text-hovered: #ff75fc;
@@ -177,7 +177,6 @@ body.light::after {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size:var(--text-fontsize);
     border: none;
     width: var(--text-width);
     height: var(--text-height);
@@ -190,8 +189,10 @@ body.light::after {
     transition: color 0.3s ease;
     backface-visibility: hidden;
     transform-style: preserve-3d;
+    font-family: "Courier Prime Regular",'Courier New', Courier, monospace;
+    font-size: var(--text-fontSize);
     will-change: transform;
-    text-shadow: -2px 4px 40px var(--text-shadow);
+    text-shadow: -2px 4px 44px var(--text-shadow);
 }
 
 .animate-forward {
@@ -210,7 +211,7 @@ body.light::after {
     50% {
         transform: rotate(180deg) scale(0.8);
         opacity: 0.5;
-        text-shadow: -2px 8px 4px var(--text-shadow);
+        text-shadow: -2px 28px 2px var(--text-shadow);
     }
     100% {
         transform: rotate(360deg) scale(1);
@@ -226,7 +227,7 @@ body.light::after {
     50% {
         transform: rotate(-180deg) scale(0.8);
         opacity: 0.5;
-        text-shadow: -2px 8px 2px var(--text-shadow);
+        text-shadow: -2px -28px 2px var(--text-shadow);
     }
     100% {
         transform: rotate(-360deg) scale(1);
