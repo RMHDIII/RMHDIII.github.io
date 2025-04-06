@@ -7,16 +7,24 @@
     --box-shadow: #a233bb;
     --border-colorIdle: #fb5cf9;
     --button-text-hovered: #86fbd4;
-    --column2-color: #964293;
-    --column1-color: #884296;
-    --fontSize: clamp(1.5rem, 6vw, 3rem);
-
+    --text-shadow:#bd4ebc;
+    --toggleText-shadow:#9dfadb;
+    --fontSize: clamp(3.5rem, 6vw, 3rem);
+    --text-fontsize:clamp(3.5rem, 6vw, 3rem);
     --text-width: 90%;
     --text-height: auto;
-    --text-topDistance: 5%;
+    --text-bottomDistance: 35%;
     --container-width: 90%;
     --container-height: auto;
-    --container-topDistance: 10%;
+    --container-topDistance: 20%;
+}
+
+@media(min-width: 768px){
+    :root{
+        --text-bottomDistance: 5%;
+        --fontSize: clamp(3.5rem, 6vw, 3rem);
+        --text-fontsize:clamp(5.5rem, 6vw, 3rem);
+    }
 }
 
 body.light {
@@ -26,6 +34,8 @@ body.light {
     --button-bg: #6a459a;
     --button-text: #95eace;
     --box-shadow: #6ab1bf;
+    --text-shadow:#61e0e4;
+    --toggleText-shadow:#fb5cf9;
     --border-colorIdle: #5cc3fb;
     --button-text-hovered: #ff75fc;
 }
@@ -69,13 +79,13 @@ body.light::after {
     background: radial-gradient(
         circle at 80% 50%,
         var(--column2-color),
-        transparent 60%
+        transparent 20%
     );
 }
 
 #container {
     position: relative;
-    font-size: clamp(1rem, 5vw, 2rem);
+    font-size: clamp(2rem, 5vw, 2rem);
     font-family: inherit;
     margin-top: var(--container-topDistance);
     display: flex;
@@ -148,6 +158,7 @@ body.light::after {
     border: 3px solid var(--border-colorIdle);
     box-shadow: 0 2px 18px var(--box-shadow);
     color: var(--button-text-hovered);
+    text-shadow: 2px 1px 8px var(--toggleText-shadow);
 }
 
 #toggle.active {
@@ -166,10 +177,11 @@ body.light::after {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size:var(--text-fontsize);
     border: none;
     width: var(--text-width);
     height: var(--text-height);
-    margin-top: var(--text-topDistance);
+    margin-bottom: var(--text-bottomDistance);
     text-align: center;
 }
 
@@ -179,6 +191,7 @@ body.light::after {
     backface-visibility: hidden;
     transform-style: preserve-3d;
     will-change: transform;
+    text-shadow: -2px 4px 40px var(--text-shadow);
 }
 
 .animate-forward {
@@ -197,6 +210,7 @@ body.light::after {
     50% {
         transform: rotate(180deg) scale(0.8);
         opacity: 0.5;
+        text-shadow: -2px 8px 4px var(--text-shadow);
     }
     100% {
         transform: rotate(360deg) scale(1);
@@ -212,6 +226,7 @@ body.light::after {
     50% {
         transform: rotate(-180deg) scale(0.8);
         opacity: 0.5;
+        text-shadow: -2px 8px 2px var(--text-shadow);
     }
     100% {
         transform: rotate(-360deg) scale(1);
