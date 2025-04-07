@@ -13,12 +13,12 @@
   }
   
   body.light {
-    --bg-color: #4e1d62;
-    --text-color: #9dfadb;
-    --button-bg: #6a459a;
+    --bg-color: #2e5384;
+    --text-color: #9df7fa;
+    --button-bg: #48425b;
     --button-text: #95eace;
     --box-shadow: #6ab1bf;
-    --text-shadow: #66f3f8;
+    --text-shadow: #9ceff2;
     --border-colorIdle: #5cc3fb;
     --button-text-hovered: #ff75fc;
   }
@@ -76,16 +76,10 @@
     border-radius: 35px;
     cursor: pointer;
     min-width: 150px;
-    -webkit-tap-highlight-color: transparent;
     position: relative;
+    -webkit-tap-highlight-color: transparent;
     overflow: hidden;
     transition: transform 0.2s ease, border 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  #toggle:hover {
-    border: 3px solid var(--border-colorIdle);
-    box-shadow: 0 2px 8px var(--box-shadow);
-    color: var(--button-text-hovered);
   }
   
   #text {
@@ -115,7 +109,7 @@
   
   @keyframes spinForward {
     0%{ transform: rotate(0deg); opacity: 1; }
-    50% { transform: rotate(180deg); opacity: 0.5; }
+    50% { transform: translateY(99%) scale(0.8); opacity: 0.5; }
     100% { transform: rotate(360deg); opacity: 1; }
   }
   
@@ -128,7 +122,6 @@
   /* Active states */
   #toggle.active {
     border: 4px solid var(--button-text);
-    box-shadow: 0 4px 12px var(--box-shadow);
     transform: translateY(-2px);
   }
   
@@ -139,15 +132,30 @@
   
   /* Desktop styles */
   @media (min-width: 768px) {
+    #toggle:hover {
+      border: 3px solid var(--border-colorIdle);
+      box-shadow: 0 2px 8px var(--box-shadow);
+      color: var(--button-text-hovered);
+    }
     #container { margin-top: 15vh; }
     #text { margin-bottom: 5%; font-size: clamp(6.5rem, 6vw, 3rem); }
+    #toggle.active {
+      border: 4px solid var(--button-text);
+      box-shadow: 0 4px 12px var(--box-shadow);
+      transform: translateY(-2px);
+    }
+    #toggle.pressed {
+      transform: translateY(2px) scale(0.98);
+      box-shadow: 0 1px 5px var(--box-shadow);
+    }
     
     .animate-forward { animation-duration: 0.8s; }
     .animate-backward { animation-duration: 0.8s; }
     
     @keyframes spinForward {
-      0% { transform: rotate(0deg) scale(1); opacity: 1; }
-      50% { transform: rotate(180deg) scale(0.8); opacity: 0.5; }
+      0% { transform: rotate(0deg) scale(1); opacity: 1;}
+      50% { transform: translateY(69%) scale(0.8); opacity: 0.5; 
+        text-shadow: 2px 4px 12px var(--box-shadow);}
       100% { transform: rotate(360deg) scale(1); opacity: 1; }
     }
     
